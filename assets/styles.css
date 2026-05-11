@@ -26,9 +26,10 @@ body {
 main {
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 32px;
+  padding-block: 18vh 6vh;
+  padding-inline: 32px;
 }
 
 .card {
@@ -37,7 +38,7 @@ main {
   padding-block: 56px 60px;
   padding-inline: 72px;
   inline-size: 100%;
-  max-inline-size: 680px;
+  max-inline-size: 600px;
   text-align: center;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.04),
@@ -56,7 +57,7 @@ main {
 .brand__naver {
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 36px;
   letter-spacing: 0.04em;
   line-height: 1;
 }
@@ -131,6 +132,9 @@ footer {
 }
 
 @media (max-width: 640px) {
+  main {
+    padding-block: 10vh 6vh;
+  }
   .card {
     padding-block: 48px 52px;
     padding-inline: 28px;
@@ -140,6 +144,9 @@ footer {
     flex-direction: column;
     gap: 8px;
     margin-block-end: 24px;
+  }
+  .brand__naver {
+    font-size: 28px;
   }
   .brand__innovation {
     font-size: 36px;
