@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "IBM Plex Sans Arabic", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.card {
+  background: #1a1a1c;
+  border-radius: 28px;
+  padding-block: 56px 60px;
+  padding-inline: 72px;
+  inline-size: 100%;
+  max-inline-size: 680px;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-block-end: 32px;
+}
+
+.brand__naver {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand__innovation {
+  font-family: "Audiowide", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
+}
+
+[lang="ar"] .desc,
+:lang(ar) .desc {
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.desc + .desc {
+  margin-block-start: 18px;
+}
+
+.lang-switch {
+  position: fixed;
+  inset-block-start: 24px;
+  inset-inline-end: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  z-index: 10;
+}
+
+.lang-switch a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.lang-switch a:hover,
+.lang-switch a:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+.lang-switch a[aria-current="page"] {
+  color: #fff;
+  font-weight: 700;
+}
+
+.lang-switch span {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+footer {
+  background: #0c1320;
+  padding-block: 18px;
+  padding-inline: 36px;
+  text-align: end;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding-block: 48px 52px;
+    padding-inline: 28px;
+    border-radius: 22px;
+  }
+  .brand {
+    flex-direction: column;
+    gap: 8px;
+    margin-block-end: 24px;
+  }
+  .brand__innovation {
+    font-size: 36px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+  [lang="ar"] .desc,
+  :lang(ar) .desc {
+    font-size: 15px;
+  }
+  .desc br {
+    display: none;
+  }
+  .lang-switch {
+    inset-block-start: 16px;
+    inset-inline-end: 18px;
+  }
+}
