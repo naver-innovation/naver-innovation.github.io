@@ -31,6 +31,41 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+
+    <meta property="og:title" content="NAVER Innovation" />
+    <meta
+      property="og:description"
+      content="A joint venture between NAVER Cloud and NHC, driving next-generation smart infrastructure across Saudi Arabia."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://corp.naver-innovation.net/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="ar" />
+    <meta
+      property="og:image"
+      content="https://corp.naver-innovation.net/assets/hero-poster.png"
+    />
+    <meta
+      property="og:video"
+      content="https://corp.naver-innovation.net/assets/hero.mp4"
+    />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:title" content="NAVER Innovation" />
+    <meta
+      name="twitter:image"
+      content="https://corp.naver-innovation.net/assets/hero-poster.png"
+    />
+    <meta
+      name="twitter:player:stream"
+      content="https://corp.naver-innovation.net/assets/hero.mp4"
+    />
+    <meta name="twitter:player:stream:content_type" content="video/mp4" />
+    <style>
+      .hero {
+        --hero-poster: url("/assets/hero-poster.png");
+      }
+    </style>
   </head>
   <body>
     <nav class="lang-switch" aria-label="Language">
@@ -40,6 +75,55 @@
     </nav>
 
     <main>
+      <section class="hero" aria-label="NAVER Innovation in Saudi Arabia">
+        <video
+          class="hero__media"
+          src="/assets/hero.mp4"
+          poster="/assets/hero-poster.png"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        ></video>
+        <button
+          class="hero__sound"
+          type="button"
+          aria-pressed="false"
+          aria-label="Turn sound on"
+          data-label-unmute="Turn sound on"
+          data-label-mute="Turn sound off"
+        >
+          <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M3 9v6h4l5 4V5L7 9H3z"
+            />
+            <path
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              fill="none"
+              d="M16 9l5 5M21 9l-5 5"
+            />
+          </svg>
+          <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M3 9v6h4l5 4V5L7 9H3z"
+            />
+            <path
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              fill="none"
+              d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8 8 0 0 1 0 12"
+            />
+          </svg>
+        </button>
+      </section>
+
       <section class="card">
         <div class="brand">
           <span class="brand__naver">NAVER</span>
@@ -60,5 +144,6 @@
     </main>
 
     <footer>© 2026 NAVER Innovation. All Rights Reserved.</footer>
+    <script src="/assets/hero.js" defer></script>
   </body>
 </html>
