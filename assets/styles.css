@@ -146,24 +146,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
   margin-block-end: 32px;
 }
 
-.brand__naver {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 36px;
-  letter-spacing: 0.04em;
-  line-height: 1;
-}
-
-.brand__innovation {
-  font-family: "Audiowide", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 44px;
-  letter-spacing: 0.01em;
-  line-height: 1;
+.brand__logo {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 360px;
+  block-size: auto;
 }
 
 .desc {
@@ -268,15 +258,10 @@ footer {
     inline-size: calc(100% - 24px);
   }
   .brand {
-    flex-direction: column;
-    gap: 6px;
     margin-block-end: 20px;
   }
-  .brand__naver {
-    font-size: 24px;
-  }
-  .brand__innovation {
-    font-size: 30px;
+  .brand__logo {
+    max-inline-size: 240px;
   }
   .desc {
     font-size: 13px;
